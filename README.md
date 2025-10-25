@@ -27,7 +27,7 @@ AI-powered e-commerce analytics platform demonstrating 6 machine learning algori
 **Website:** https://machine-learning-final-exam.vercel.app/
 
 ## 👨‍💻 Developers
-Lasala, Dwyn Richie T.,
-Alfaro, Larrah Shayne Ashley B.,
-Mayam, James Angelo,
-Fernando, King Philip,
+Dwyn Richie T. Lasala,
+Larrah Shayne Ashley B. Alfaro,
+James Angelo Mayam,
+King Philip Fernando
