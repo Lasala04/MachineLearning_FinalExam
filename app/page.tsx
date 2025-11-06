@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-orange-50">
+      <main className="min-h-screen bg-linear-to-br from-gray-50 via-purple-50 to-orange-50">
         
         {/* Hero Section */}
-        <div className="relative bg-gradient-to-r from-purple-800 via-purple-600 to-orange-500 text-white py-24 px-6 overflow-hidden">
+        <div className="relative bg-linear-to-r from-purple-800 via-purple-600 to-orange-500 text-white py-24 px-6 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-300 rounded-full blur-3xl animate-pulse"></div>
@@ -97,7 +97,7 @@ export default function Home() {
         </section>
 
         {/* Algorithms Section */}
-        <section id="algorithms" className="bg-gradient-to-br from-purple-900 to-purple-700 py-20 px-6">
+        <section id="algorithms" className="bg-linear-to-br from-purple-900 to-purple-700 py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-orange-300 font-bold text-sm uppercase tracking-wider">Our Technology</span>
@@ -172,11 +172,11 @@ export default function Home() {
                   href={card.href}
                   className="group relative bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
                 >
-                  <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${card.color}`}></div>
+                  <div className={`absolute top-0 left-0 right-0 h-2 bg-linear-to-r ${card.color}`}></div>
                   
                   <div className="flex items-start justify-between mb-4">
                     <span className="text-5xl">{card.icon}</span>
-                    <span className={`text-xs font-bold text-white bg-gradient-to-r ${card.color} px-3 py-1 rounded-full`}>
+                    <span className={`text-xs font-bold text-white bg-linear-to-r ${card.color} px-3 py-1 rounded-full`}>
                       Algorithm {card.num}
                     </span>
                   </div>

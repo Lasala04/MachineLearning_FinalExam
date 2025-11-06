@@ -1,13 +1,59 @@
+'use client'
+
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
+import { useState } from 'react'
+
+interface LRPredictionData {
+  success: boolean
+  prediction: number
+  confidence: number
+  algorithm: string
+  interpretation: string
+  formula: string
+}
 
 export default function LinearRegressionPage() {
+  const [month1, setMonth1] = useState<string>('')
+  const [month2, setMonth2] = useState<string>('')
+  const [month3, setMonth3] = useState<string>('')
+  const [prediction, setPrediction] = useState<LRPredictionData | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string>('')
+
+  const handlePredict = async () => {
+    setError('')
+    setLoading(true)
+
+    try {
+      const response = await fetch('/api/predict/linear-regression', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          month_1_sales: parseFloat(month1),
+          month_2_sales: parseFloat(month2),
+          month_3_sales: parseFloat(month3)
+        })
+      })
+
+      const data = await response.json()
+      if (data.success) {
+        setPrediction(data)
+      } else {
+        setError('Prediction failed')
+      }
+    } catch (err) {
+      setError('Error: ' + String(err))
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <>
       <Navbar />
-      {/* Colorful Header Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-12 px-6">
+      <div className="bg-linear-to-r from-blue-600 to-cyan-500 text-white py-12 px-6">
         <div className="max-w-4xl mx-auto">
           <Link href="/" className="text-blue-100 hover:text-white mb-4 inline-flex items-center transition">
             <span className="mr-2">←</span> Back to Home
@@ -25,21 +71,102 @@ export default function LinearRegressionPage() {
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 py-12">
           
-          {/* Business Problem Section */}
+          {/* GUIDE SECTION */}
+          <section className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+            <h2 className="text-2xl font-bold text-blue-900 mb-4">📖 How to Use This Tool</h2>
+            <div className="text-gray-700 space-y-3">
+              <p><strong>Step 1:</strong> Enter your sales data for the past 3 months</p>
+              <p><strong>Step 2:</strong> Click &ldquo;Predict Next Month&rdquo; button</p>
+              <p><strong>Step 3:</strong> See your predicted sales with confidence score</p>
+              <p className="text-sm italic">💡 Example: If you sold $40K, $45K, $50K in months 1-3, the model predicts $55K for month 4!</p>
+            </div>
+          </section>
+
+          {/* INTERACTIVE FORM */}
+          <section className="bg-white p-8 rounded-lg shadow-md mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Try It Yourself</h2>
+            
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Month 1 Sales ($)</label>
+                <input
+                  type="number"
+                  value={month1}
+                  onChange={(e) => setMonth1(e.target.value)}
+                  placeholder="e.g., 40000"
+                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-black"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Month 2 Sales ($)</label>
+                <input
+                  type="number"
+                  value={month2}
+                  onChange={(e) => setMonth2(e.target.value)}
+                  placeholder="e.g., 45000"
+                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-black"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Month 3 Sales ($)</label>
+                <input
+                  type="number"
+                  value={month3}
+                  onChange={(e) => setMonth3(e.target.value)}
+                  placeholder="e.g., 50000"
+                  className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-black"
+                />
+              </div>
+            </div>
+
+            <button
+              onClick={handlePredict}
+              disabled={loading || !month1 || !month2 || !month3}
+              className="w-full bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold py-3 rounded-lg hover:opacity-90 disabled:opacity-50 transition"
+            >
+              {loading ? '⏳ Predicting...' : '🔮 Predict Next Month'}
+            </button>
+
+            {error && (
+              <div className="mt-4 bg-red-50 border-l-4 border-red-500 p-4 text-red-700">
+                ❌ {error}
+              </div>
+            )}
+
+            {prediction && (
+              <div className="mt-8 bg-linear-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 p-6 rounded-lg">
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">📊 Prediction Result</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-sm text-gray-600">Predicted Sales</p>
+                    <p className="text-4xl font-bold text-blue-600">${prediction.prediction.toLocaleString()}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-600">Confidence Level</p>
+                    <p className="text-4xl font-bold text-green-600">{prediction.confidence}%</p>
+                  </div>
+                </div>
+                <p className="mt-6 text-gray-700 bg-white p-4 rounded border-l-4 border-blue-500">
+                  <strong>Interpretation:</strong> {prediction.interpretation}
+                </p>
+                <p className="mt-4 text-sm text-gray-600">
+                  <strong>Formula Used:</strong> {prediction.formula}
+                </p>
+              </div>
+            )}
+          </section>
+
+          {/* BUSINESS PROBLEM */}
           <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-orange-600 mb-3">
-              🎯 The Business Problem
-            </h2>
+            <h2 className="text-2xl font-bold text-orange-600 mb-3">🎯 The Business Problem</h2>
             <p className="text-gray-700">
               Online retailers struggle to predict how many products they will sell next month. Order too little inventory = lost sales and disappointed customers. Order too much = wasted money on storage, potential markdowns, and tied-up capital.
             </p>
           </section>
 
-          {/* How It Helps Section */}
+          {/* HOW IT HELPS */}
           <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-purple-700 mb-3">
-              💡 How Linear Regression Helps
-            </h2>
+            <h2 className="text-2xl font-bold text-purple-700 mb-3">💡 How Linear Regression Helps</h2>
             <p className="text-gray-700 mb-4">
               Linear Regression is like drawing a trend line through your past sales data. It analyzes historical patterns and extends that line into the future to predict upcoming sales with remarkable accuracy.
             </p>
@@ -52,25 +179,9 @@ export default function LinearRegressionPage() {
             </div>
           </section>
 
-          {/* Data We Use Section */}
+          {/* VISUAL CHART */}
           <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-blue-700 mb-3">
-              📊 Data We Use
-            </h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Historical sales data (past 12-24 months)</li>
-              <li>Seasonal trends (holidays, back-to-school, summer peaks)</li>
-              <li>Marketing campaigns and promotional activities</li>
-              <li>Day of week patterns (weekends vs weekdays)</li>
-              <li>Economic indicators and market conditions</li>
-            </ul>
-          </section>
-
-          {/* Visual Results Section */}
-          <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-green-700 mb-3">
-              📈 Visual Results
-            </h2>
+            <h2 className="text-2xl font-bold text-green-700 mb-3">📈 Visual Results</h2>
             <div className="my-6">
               <Image 
                 src="/images/sales_forecast_chart.png" 
@@ -85,56 +196,9 @@ export default function LinearRegressionPage() {
             </div>
           </section>
 
-          {/* Sample Results Section */}
-          <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-indigo-700 mb-3">
-              📊 Sample Results
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Here is an example prediction for an online clothing retailer:
-            </p>
-            <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border-2 border-black">
-            <thead>
-            <tr className="bg-gray-100">
-                <th className="py-2 px-4 border-2 border-black text-left text-black font-bold">Month</th>
-                <th className="py-2 px-4 border-2 border-black text-left text-black font-bold">Predicted Sales</th>
-                <th className="py-2 px-4 border-2 border-black text-left text-black font-bold">Actual Sales</th>
-                <th className="py-2 px-4 border-2 border-black text-left text-black font-bold">Accuracy</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td className="py-2 px-4 border-2 border-black text-black">January 2025</td>
-                <td className="py-2 px-4 border-2 border-black text-black">$45,000</td>
-                <td className="py-2 px-4 border-2 border-black text-black">$44,200</td>
-                <td className="py-2 px-4 border-2 border-black text-green-600 font-bold">98.2%</td>
-            </tr>
-            <tr className="bg-gray-50">
-                <td className="py-2 px-4 border-2 border-black text-black">February 2025</td>
-                <td className="py-2 px-4 border-2 border-black text-black">$38,000</td>
-                <td className="py-2 px-4 border-2 border-black text-black">$39,100</td>
-                <td className="py-2 px-4 border-2 border-black text-green-600 font-bold">97.1%</td>
-            </tr>
-            <tr className="bg-green-50">
-                <td className="py-2 px-4 border-2 border-black text-black font-bold">March 2025</td>
-                <td className="py-2 px-4 border-2 border-black text-green-700 font-bold">$52,500 (Forecast)</td>
-                <td className="py-2 px-4 border-2 border-black text-black">Pending</td>
-                <td className="py-2 px-4 border-2 border-black text-black">Pending</td>
-            </tr>
-            </tbody>
-        </table>
-        </div>
-            <p className="text-gray-700 mt-4">
-              <strong>Overall Model Accuracy:</strong> 92.5% on historical data
-            </p>
-          </section>
-
-          {/* Business Impact Section */}
-          <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-emerald-700 mb-3">
-              💰 Business Impact
-            </h2>
+          {/* BUSINESS IMPACT */}
+          <section className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-emerald-700 mb-3">💰 Business Impact</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                 <h3 className="font-bold text-green-800 mb-2">✅ Reduce Inventory Costs</h3>
@@ -152,22 +216,6 @@ export default function LinearRegressionPage() {
                 <h3 className="font-bold text-green-800 mb-2">✅ Data-Driven Decisions</h3>
                 <p className="text-gray-700">Replace guesswork with science</p>
               </div>
-            </div>
-          </section>
-
-          {/* Technical Details Section */}
-          <section className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">
-              🔬 Technical Details
-            </h2>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-700 mb-2"><strong>Algorithm:</strong> Linear Regression</p>
-              <p className="text-gray-700 mb-2"><strong>Library:</strong> scikit-learn</p>
-              <p className="text-gray-700 mb-2"><strong>Training Data:</strong> 12,000+ transactions</p>
-              <p className="text-gray-700 mb-2"><strong>Model Type:</strong> Supervised Learning</p>
-              <p className="text-gray-700 mb-2"><strong>Features:</strong> 4 (month, day, promotions, holidays)</p>
-              <p className="text-gray-700 mb-2"><strong>Accuracy:</strong> 92.5%</p>
-              <p className="text-gray-700"><strong>Formula:</strong> <code className="bg-white px-2 py-1 rounded">Sales = (Month × Slope) + Intercept</code></p>
             </div>
           </section>
 
