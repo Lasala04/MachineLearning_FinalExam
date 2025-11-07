@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-linear-to-br from-gray-50 via-purple-50 to-orange-50">
+      <main className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950">
         
         {/* Hero Section */}
-        <div className="relative bg-linear-to-r from-purple-800 via-purple-600 to-orange-500 text-white py-24 px-6 overflow-hidden">
+        <div className="relative bg-linear-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-24 px-6 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-300 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 rounded-full blur-3xl animate-pulse"></div>
           </div>
           
           <div className="relative max-w-6xl mx-auto text-center">
@@ -32,7 +32,7 @@ export default function Home() {
             <div className="mt-10 flex gap-4 justify-center">
               <Link 
                 href="/#algorithms"
-                className="px-8 py-4 bg-white text-purple-800 rounded-lg font-bold hover:bg-gray-100 transform hover:scale-105 transition shadow-lg"
+                className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transform hover:scale-105 transition shadow-lg"
               >
                 Explore Solutions →
               </Link>
@@ -49,33 +49,33 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="max-w-6xl mx-auto px-6 py-20">
           <div className="text-center mb-12">
-            <span className="text-orange-500 font-bold text-sm uppercase tracking-wider">About Us</span>
-            <h2 className="text-5xl font-extrabold text-gray-900 mt-2 mb-6">
+            <span className="text-blue-400 font-bold text-sm uppercase tracking-wider">About Us</span>
+            <h2 className="text-5xl font-extrabold text-white mt-2 mb-6">
               About ShopSmart AI
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                We help online businesses make <span className="font-bold text-purple-800">smarter decisions</span> using 
+              <p className="text-lg text-slate-300 leading-relaxed">
+                We help online businesses make <span className="font-bold text-blue-400">smarter decisions</span> using 
                 machine learning. Our platform analyzes your sales data, customer reviews, and buying patterns 
                 to predict trends, optimize pricing, and maximize profits.
               </p>
               
-              <div className="bg-white from-purple-50 to-orange-50 p-6 rounded-2xl border-l-4 border-purple-800">
-                <h3 className="text-2xl font-bold text-purple-800 mb-3 flex items-center">
+              <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border-l-4 border-blue-500">
+                <h3 className="text-2xl font-bold text-blue-400 mb-3 flex items-center">
                   <span className="text-3xl mr-3">🎯</span> Our Mission
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-slate-300">
                   To become the #1 trusted AI partner for e-commerce businesses worldwide, 
                   helping them leverage data-driven insights for competitive advantage.
                 </p>
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us?</h3>
+            <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-700">
+              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
               <ul className="space-y-4">
                 {[
                   { icon: '⚡', title: 'Real-Time Insights', desc: 'Instant AI-powered analytics' },
@@ -86,8 +86,8 @@ export default function Home() {
                   <li key={i} className="flex items-start">
                     <span className="text-3xl mr-4">{item.icon}</span>
                     <div>
-                      <h4 className="font-bold text-gray-900">{item.title}</h4>
-                      <p className="text-sm text-gray-600">{item.desc}</p>
+                      <h4 className="font-bold text-white">{item.title}</h4>
+                      <p className="text-sm text-slate-400">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -97,14 +97,14 @@ export default function Home() {
         </section>
 
         {/* Algorithms Section */}
-        <section id="algorithms" className="bg-linear-to-br from-purple-900 to-purple-700 py-20 px-6">
+        <section id="algorithms" className="bg-linear-to-br from-slate-900 to-slate-800 py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <span className="text-orange-300 font-bold text-sm uppercase tracking-wider">Our Technology</span>
+              <span className="text-blue-400 font-bold text-sm uppercase tracking-wider">Our Technology</span>
               <h2 className="text-5xl font-extrabold text-white mt-2 mb-6">
                 AI-Powered Solutions
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 Six powerful machine learning algorithms working together to solve 
                 your biggest e-commerce challenges
               </p>
@@ -170,30 +170,30 @@ export default function Home() {
                 <Link 
                   key={card.num}
                   href={card.href}
-                  className="group relative bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+                  className="group relative bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden border border-slate-700 hover:border-slate-600"
                 >
                   <div className={`absolute top-0 left-0 right-0 h-2 bg-linear-to-r ${card.color}`}></div>
                   
                   <div className="flex items-start justify-between mb-4">
                     <span className="text-5xl">{card.icon}</span>
                     <span className={`text-xs font-bold text-white bg-linear-to-r ${card.color} px-3 py-1 rounded-full`}>
-                      Algorithm {card.num}
+                      Algo {card.num}
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {card.title}
                   </h3>
                   
-                  <p className="text-sm text-gray-500 font-medium mb-3">
+                  <p className="text-sm text-slate-400 font-medium mb-3">
                     {card.algo}
                   </p>
                   
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-slate-300 mb-4">
                     {card.desc}
                   </p>
                   
-                  <div className="flex items-center text-purple-800 font-bold group-hover:text-orange-500 transition">
+                  <div className="flex items-center text-blue-400 font-bold group-hover:text-blue-300 transition">
                     Learn More 
                     <span className="ml-2 transform group-hover:translate-x-2 transition-transform">→</span>
                   </div>
@@ -204,34 +204,34 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
+        <footer className="bg-slate-950 text-white py-12 border-t border-slate-800">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-bold mb-4 flex items-center">
                   <span className="text-2xl mr-2">🛒</span> ShopSmart AI
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-slate-400">
                   Empowering e-commerce with intelligent machine learning solutions.
                 </p>
               </div>
               
               <div>
-                <h4 className="font-bold mb-4 text-orange-400">Quick Links</h4>
+                <h4 className="font-bold mb-4 text-blue-400">Quick Links</h4>
                 <ul className="space-y-2">
-                  <li><Link href="/#about" className="text-gray-400 hover:text-white transition">About Us</Link></li>
-                  <li><Link href="/#algorithms" className="text-gray-400 hover:text-white transition">Our Solutions</Link></li>
+                  <li><Link href="/#about" className="text-slate-400 hover:text-white transition">About Us</Link></li>
+                  <li><Link href="/#algorithms" className="text-slate-400 hover:text-white transition">Our Solutions</Link></li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="font-bold mb-4 text-orange-400">Contact</h4>
-                <p className="text-gray-400">📧 contact@shopsmartai.com</p>
-                <p className="text-gray-400">📱 (555) 123-4567</p>
+                <h4 className="font-bold mb-4 text-blue-400">Contact</h4>
+                <p className="text-slate-400">📧 contact@shopsmartai.com</p>
+                <p className="text-slate-400">📱 (555) 123-4567</p>
               </div>
             </div>
             
-            <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+            <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
               <p>© 2025 ShopSmart AI. All rights reserved.</p>
             </div>
           </div>

@@ -1,0 +1,237 @@
+review,sentiment,rating
+"Defective product, very upset",NEGATIVE,1
+"Broke after one day",NEGATIVE,2
+"Not bad, but could be better",NEUTRAL,3
+"Poor quality and bad service",NEGATIVE,1
+"Decent for the price",NEUTRAL,3
+"Extremely disappointed",NEGATIVE,1
+"Wonderful experience from start to finish",POSITIVE,5
+"Acceptable",NEUTRAL,3
+"Does what it's supposed to",NEUTRAL,3
+"Damaged on arrival",NEGATIVE,2
+"Normal product, nothing extraordinary",NEUTRAL,3
+"Just average",NEUTRAL,3
+"Outstanding service and quality",POSITIVE,4
+"Don't buy, very disappointed",NEGATIVE,2
+"Best in its class, absolutely love it",POSITIVE,5
+"Excellent quality and fast shipping",POSITIVE,4
+"Excellent quality and fast shipping",POSITIVE,5
+"Not bad, but could be better",NEUTRAL,3
+"Worst purchase ever",NEGATIVE,2
+"Awful experience, returning it",NEGATIVE,2
+"It's okay, nothing special",NEUTRAL,3
+"Excellent quality and fast shipping",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,4
+"Absolute disaster",NEGATIVE,2
+"Fantastic product, will buy again",POSITIVE,4
+"Horrible, would give zero stars",NEGATIVE,2
+"Total waste, does not work",NEGATIVE,1
+"Highly recommend, five stars!",POSITIVE,4
+"Impressed with the quality and service",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Broke after one day",NEGATIVE,2
+"Average product, nothing to complain about",NEUTRAL,3
+"Worst purchase ever",NEGATIVE,2
+"Wonderful experience from start to finish",POSITIVE,5
+"Broke after one day",NEGATIVE,2
+"Impressed with the quality and service",POSITIVE,4
+"Impressed with the quality and service",POSITIVE,4
+"Extremely disappointed",NEGATIVE,2
+"Not worth it at all",NEGATIVE,2
+"Quality is top notch, very satisfied",POSITIVE,5
+"Super happy with this purchase",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Quality is top notch, very satisfied",POSITIVE,4
+"Normal product, nothing extraordinary",NEUTRAL,3
+"Best in its class, absolutely love it",POSITIVE,4
+"Average product, nothing to complain about",NEUTRAL,3
+"Best in its class, absolutely love it",POSITIVE,4
+"Awful experience, returning it",NEGATIVE,1
+"Total waste, does not work",NEGATIVE,1
+"It works fine",NEUTRAL,3
+"Broke after one day",NEGATIVE,1
+"Horrible, would give zero stars",NEGATIVE,1
+"Absolute disaster",NEGATIVE,2
+"Worth every penny, highly satisfied",POSITIVE,4
+"Total waste, does not work",NEGATIVE,1
+"Okay for the price",NEUTRAL,3
+"Outstanding service and quality",POSITIVE,5
+"Worst purchase ever",NEGATIVE,1
+"Acceptable",NEUTRAL,3
+"Absolute disaster",NEGATIVE,2
+"Not worth it at all",NEGATIVE,2
+"Fantastic product, will buy again",POSITIVE,4
+"Worth every penny, highly satisfied",POSITIVE,5
+"Disgusting quality",NEGATIVE,2
+"Best in its class, absolutely love it",POSITIVE,5
+"Amazing product! Exceeded expectations",POSITIVE,4
+"Okay for the price",NEUTRAL,3
+"Neither good nor bad",NEUTRAL,3
+"Normal product, nothing extraordinary",NEUTRAL,3
+"It's okay, nothing special",NEUTRAL,3
+"Highly recommend, five stars!",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,4
+"Couldn't ask for better",POSITIVE,5
+"Damaged on arrival",NEGATIVE,2
+"Extremely disappointed",NEGATIVE,1
+"Super happy with this purchase",POSITIVE,4
+"Worst purchase ever",NEGATIVE,2
+"Broke after one day",NEGATIVE,1
+"Does the job",NEUTRAL,3
+"Horrible, would give zero stars",NEGATIVE,2
+"Average product, nothing to complain about",NEUTRAL,3
+"Not bad, but could be better",NEUTRAL,3
+"Couldn't ask for better",POSITIVE,4
+"It works fine",NEUTRAL,3
+"Met my expectations",NEUTRAL,3
+"Don't buy, very disappointed",NEGATIVE,2
+"Not bad, but could be better",NEUTRAL,3
+"Just average",NEUTRAL,3
+"Excellent quality and fast shipping",POSITIVE,5
+"Couldn't ask for better",POSITIVE,5
+"Not bad, but could be better",NEUTRAL,3
+"Acceptable quality",NEUTRAL,3
+"Don't buy, very disappointed",NEGATIVE,2
+"Total waste, does not work",NEGATIVE,1
+"It works fine",NEUTRAL,3
+"Damaged on arrival",NEGATIVE,1
+"Awful experience, returning it",NEGATIVE,1
+"Worst purchase ever",NEGATIVE,2
+"Great value for money",POSITIVE,5
+"Absolute disaster",NEGATIVE,2
+"It works fine",NEUTRAL,3
+"Love it! Best purchase ever",POSITIVE,4
+"Acceptable",NEUTRAL,3
+"Quality is top notch, very satisfied",POSITIVE,4
+"Acceptable",NEUTRAL,3
+"Not bad, but could be better",NEUTRAL,3
+"Love it! Best purchase ever",POSITIVE,4
+"Don't buy, very disappointed",NEGATIVE,1
+"Satisfactory",NEUTRAL,3
+"Broke after one day",NEGATIVE,2
+"Don't buy, very disappointed",NEGATIVE,1
+"Not worth it at all",NEGATIVE,2
+"Outstanding service and quality",POSITIVE,5
+"Couldn't ask for better",POSITIVE,4
+"Normal product, nothing extraordinary",NEUTRAL,3
+"Complete garbage, save your money",NEGATIVE,2
+"Highly recommend, five stars!",POSITIVE,5
+"Amazing product! Exceeded expectations",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Total waste, does not work",NEGATIVE,2
+"Damaged on arrival",NEGATIVE,1
+"Amazing product! Exceeded expectations",POSITIVE,4
+"Best in its class, absolutely love it",POSITIVE,5
+"Total waste, does not work",NEGATIVE,1
+"It's okay, nothing special",NEUTRAL,3
+"Neither good nor bad",NEUTRAL,3
+"Not bad, but could be better",NEUTRAL,3
+"Satisfactory",NEUTRAL,3
+"Love it! Best purchase ever",POSITIVE,4
+"Satisfactory",NEUTRAL,3
+"Neither good nor bad",NEUTRAL,3
+"Disgusting quality",NEGATIVE,1
+"Quality is top notch, very satisfied",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Super happy with this purchase",POSITIVE,5
+"Not bad, but could be better",NEUTRAL,3
+"Highly recommend, five stars!",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,5
+"Extremely disappointed",NEGATIVE,1
+"Love it! Best purchase ever",POSITIVE,5
+"Defective product, very upset",NEGATIVE,1
+"It works fine",NEUTRAL,3
+"Couldn't ask for better",POSITIVE,5
+"Fantastic product, will buy again",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,4
+"It's okay, nothing special",NEUTRAL,3
+"Not bad, but could be better",NEUTRAL,3
+"Acceptable quality",NEUTRAL,3
+"Awful experience, returning it",NEGATIVE,1
+"Satisfactory",NEUTRAL,3
+"Met my expectations",NEUTRAL,3
+"Just average",NEUTRAL,3
+"Does what it's supposed to",NEUTRAL,3
+"Highly recommend, five stars!",POSITIVE,5
+"Decent for the price",NEUTRAL,3
+"Poor quality and bad service",NEGATIVE,1
+"Defective product, very upset",NEGATIVE,1
+"Extremely disappointed",NEGATIVE,1
+"Wonderful experience from start to finish",POSITIVE,5
+"Acceptable",NEUTRAL,3
+"Does what it's supposed to",NEUTRAL,3
+"Damaged on arrival",NEGATIVE,2
+"Normal product, nothing extraordinary",NEUTRAL,3
+"Just average",NEUTRAL,3
+"Outstanding service and quality",POSITIVE,4
+"Don't buy, very disappointed",NEGATIVE,2
+"Best in its class, absolutely love it",POSITIVE,5
+"Excellent quality and fast shipping",POSITIVE,4
+"Excellent quality and fast shipping",POSITIVE,5
+"Not bad, but could be better",NEUTRAL,3
+"Worst purchase ever",NEGATIVE,2
+"Awful experience, returning it",NEGATIVE,2
+"It's okay, nothing special",NEUTRAL,3
+"Excellent quality and fast shipping",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,4
+"Absolute disaster",NEGATIVE,2
+"Fantastic product, will buy again",POSITIVE,4
+"Horrible, would give zero stars",NEGATIVE,2
+"Total waste, does not work",NEGATIVE,1
+"Highly recommend, five stars!",POSITIVE,4
+"Impressed with the quality and service",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Broke after one day",NEGATIVE,2
+"Average product, nothing to complain about",NEUTRAL,3
+"Worst purchase ever",NEGATIVE,2
+"Wonderful experience from start to finish",POSITIVE,5
+"Broke after one day",NEGATIVE,2
+"Impressed with the quality and service",POSITIVE,4
+"Impressed with the quality and service",POSITIVE,4
+"Extremely disappointed",NEGATIVE,2
+"Not worth it at all",NEGATIVE,2
+"Quality is top notch, very satisfied",POSITIVE,5
+"Super happy with this purchase",POSITIVE,5
+"Average product, nothing to complain about",NEUTRAL,3
+"Quality is top notch, very satisfied",POSITIVE,4
+"Normal product, nothing extraordinary",NEUTRAL,3
+"Best in its class, absolutely love it",POSITIVE,4
+"Average product, nothing to complain about",NEUTRAL,3
+"Best in its class, absolutely love it",POSITIVE,4
+"Awful experience, returning it",NEGATIVE,1
+"Total waste, does not work",NEGATIVE,1
+"It works fine",NEUTRAL,3
+"Broke after one day",NEGATIVE,1
+"Horrible, would give zero stars",NEGATIVE,1
+"Absolute disaster",NEGATIVE,2
+"Worth every penny, highly satisfied",POSITIVE,4
+"Total waste, does not work",NEGATIVE,1
+"Okay for the price",NEUTRAL,3
+"Outstanding service and quality",POSITIVE,5
+"Worst purchase ever",NEGATIVE,1
+"Acceptable",NEUTRAL,3
+"Absolute disaster",NEGATIVE,2
+"Not worth it at all",NEGATIVE,2
+"Fantastic product, will buy again",POSITIVE,4
+"Worth every penny, highly satisfied",POSITIVE,5
+"Disgusting quality",NEGATIVE,2
+"Best in its class, absolutely love it",POSITIVE,5
+"Amazing product! Exceeded expectations",POSITIVE,4
+"Okay for the price",NEUTRAL,3
+"Neither good nor bad",NEUTRAL,3
+"Normal product, nothing extraordinary",NEUTRAL,3
+"It's okay, nothing special",NEUTRAL,3
+"Highly recommend, five stars!",POSITIVE,4
+"Wonderful experience from start to finish",POSITIVE,4
+"Couldn't ask for better",POSITIVE,5
+"Damaged on arrival",NEGATIVE,2
+"Extremely disappointed",NEGATIVE,1
+"Super happy with this purchase",POSITIVE,4
+"Worst purchase ever",NEGATIVE,2
+"Broke after one day",NEGATIVE,1
+"Does the job",NEUTRAL,3
+"Horrible, would give zero stars",NEGATIVE,2
+"Average product, nothing to complain about",NEUTRAL,3
+"Not bad, but could be better",NEUTRAL,3
+"Couldn't ask for better",POSITIVE,4
+"It works fine",NEUTRAL,3
